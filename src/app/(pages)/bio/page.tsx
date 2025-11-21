@@ -1,13 +1,11 @@
 import NavBar from "@/components/NavBar";
 
-export default function CanvasPage() {
+export default function BioPage() {
   return (
     <div className = "p-8 flex flex-col gap-16 w-full max-w-6xl mx-auto">
         <h2 className="">
-            this is the canvas page!
+            this is the bio page!
         </h2>
-        <NavBar />
-
 
 
 

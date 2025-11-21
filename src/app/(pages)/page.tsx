@@ -1,4 +1,6 @@
+
 import ResumeSection from "@/components/Projects/ResumeSection";
+import NavBar from "@/components/NavBar";
 
 const projects = [
     {id : 1, title: "project 1 "},
@@ -12,11 +14,12 @@ const projects = [
 export default function ProjectsPage() {
   return (
     <div className = "p-8 flex flex-col gap-16 w-full max-w-6xl mx-auto">
+
+
         {/* resume section */}
         <section>
             <ResumeSection />
         </section>
-
 
         {/*projects sectiohn */}
         <section className="grid grid-cols-2 gap-16">

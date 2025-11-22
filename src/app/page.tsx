@@ -8,44 +8,65 @@ const projects = [
 
 
 export default function Home() {
-  return (
-    <div className="h-screen w-full flex justify-center hide-scrollbar">
-      <div className="h-full w-full max-w-[80%] mx-auto flex flex-col overflow-y-scroll snap-y snap-proximity">
+  return (<div className="
+              
+              h-full w-full max-w-[80%] mx-auto flex flex-col
 
 
-
-      
+            ">
 
       {/* welcome */}
-      <section id="greeting" className="snap-start autoHide min-h-screen p-8 flex flex-col justify-center p-8 border-b border-neutral-200">
-        <div className="w-full max-2-6xl mx-auto flex flex-row items-center justify-between gap-12">
-          <div className="flex-1">
-            <h1 className="text-4xl font-bold mb-4 text-neutral-600">Hello, I’m A</h1>
-            <p className="text-lg text-neutral-600 max-w-prose">
-              Welcome to my personal site. I'm a CS/SE student focused on building clean,
-              thoughtful systems and tools.
-            </p>
+      <section 
+        id="greeting" 
+        className="
+          autoHide 
+          min-h-screen 
+          p-8 
+          flex 
+          flex-col 
+          justify-center 
+          border-b 
+          border-neutral-200">
+        <div>
+          
 
-            <div className="flex gap-2"> 
+        </div>
+        <div className="w-full max-2-6xl mx-auto flex flex-row items-center justify-between gap-4">
+          <div className="">
+
+            <div className="moving-gradient-blue bg-white absolute w-160 h-60 rounded-4xl shadow-xl">
+
+              <div className="p-4">
+
+                <h1 className="text-4xl font-bold mb-4 text-neutral-100">Hello, I’m A</h1>
+                <p className="text-lg text-neutral-100 max-w-prose">
+                  Welcome to my personal site. I'm a CS/SE student focused on building clean,
+                  thoughtful systems and tools.
+                </p>
+
+                <div className="flex gap-2"> 
               
 
-              <a
-                href="https://example.com"
-                target="blank"
-                rel="noopener noreferrer"
-              >
-                <button className="h-10 w-30 px-4 py-2 bg-blue-600 text-white rounded">
-                  Resume
-                </button>
-              </a>
+                  <a
+                    href="https://example.com"
+                    target="blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button className="h-10 w-30 px-4 py-2 bg-blue-600 text-white rounded">
+                      Resume
+                    </button>
+                  </a>
+                </div>
+                
+              </div>
             </div>
             
           </div>
-          <div className="flex-1 flex justify-end">
+          <div className="flex justify-end">
             <img
-              src="/your-image.png"
+              src="/pfp.jpdg"
               alt="Profile"
-              className="w-128 h-128 p-4 object-cover rounded-xl shadow-xl"
+              className="w-128 h-128 p-2 object-cover rounded-4xl shadow-xl"
             />
           </div>
 
@@ -55,7 +76,17 @@ export default function Home() {
       </section>
 
       {/* projects */}
-      <section id="projects" className="snap-start autoShow autoHide min-h-screen p-8 border-b border-neutral-200">
+      <section id="projects" 
+        className="autoShow autoHide 
+        min-h-screen p-8 border-b 
+        w-full
+        border-neutral-200 
+        rounded-xl
+        opacity-30
+        ">
+        <div>
+          <div className="absolute top-1/3 "></div>
+        </div>
         <h2 className="autoShow text-neutral-600 text-3xl font-semibold mb-6">Projects</h2>
 
         <section className="grid grid-cols-3 gap-4">
@@ -132,6 +163,6 @@ export default function Home() {
       </section>
 
     </div>
-    </div>
+
   );
 }

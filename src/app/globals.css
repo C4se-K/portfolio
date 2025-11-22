@@ -19,13 +19,8 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
 body {
-  overflow: hidden;
-
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -64,9 +59,31 @@ body {
 .moving-gradient {
   background: linear-gradient(
     120deg,
-      rgba(255, 190, 200, 0.962),
-      rgba(200, 200, 255, 0.834),
-      rgba(200, 255, 240, 0.8)
+      rgb(255, 177, 189),
+      rgb(186, 186, 255),
+      rgb(182, 255, 236)
+    );
+  background-size: 300% 300%;
+  animation: gradientMove 18s ease infinite;
+}
+
+.moving-gradient-dark {
+  background: linear-gradient(
+    120deg,
+      rgb(255, 177, 189),
+      rgb(186, 186, 255),
+      rgb(182, 255, 236)
+    );
+  background-size: 300% 300%;
+  animation: gradientMove 18s ease infinite;
+}
+
+.moving-gradient-blue {
+  background: linear-gradient(
+    120deg,
+      rgb(122, 50, 255),
+      rgb(59, 59, 255),
+      rgb(85, 255, 210)
     );
   background-size: 300% 300%;
   animation: gradientMove 18s ease infinite;

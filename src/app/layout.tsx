@@ -5,6 +5,7 @@ import "./globals.css";
 
 import Scroll from "@/components/Scroll";
 import SVGPath from "@/components/SVGPath";
+import GridRippleBackground from "@/components/GridBG";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -37,8 +38,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           target="blank"
           rel="noopener noreferrer"
         >
-          <button className="fixed top-16 right-16 z-50 px-8 py-4 bg-blue-600 font-semibold text-white rounded-xl shadow-xl">
-            Resume
+          <button className="fixed top-16 right-16 z-50 px-8 py-4 font-semibold text-neutral-800 rounded-xl shadow-xl">
+            RESUME
           </button>
         </a>
 

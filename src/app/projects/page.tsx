@@ -1,5 +1,5 @@
 
-import ResumeSection from "@/components/Projects/ResumeSection";
+import ResumeSection from "@/components/ResumeSection";
 
 
 const projects = [

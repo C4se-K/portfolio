@@ -19,8 +19,13 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  
+  overflow: hidden;
+
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -36,6 +41,7 @@ body {
   mask-size: 100% 100%;
   mask-repeat: no-repeat;
 }
+
 
 .project-card {
   display: flex;
@@ -58,10 +64,10 @@ body {
 .moving-gradient {
   background: linear-gradient(
     120deg,
-    rgba(255, 190, 200, 0.962),
-    rgba(200, 200, 255, 0.834),
-    rgba(200, 255, 240, 0.8)
-  );
+      rgba(255, 190, 200, 0.962),
+      rgba(200, 200, 255, 0.834),
+      rgba(200, 255, 240, 0.8)
+    );
   background-size: 300% 300%;
   animation: gradientMove 18s ease infinite;
 }
@@ -70,4 +76,43 @@ body {
   0%   { background-position: 0% 50%; }
   50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+.autoShow {
+  animation: text-appear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 100vh;
+}
+
+@keyframes text-appear {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.autoHide {
+  animation: text-disappear both;
+  animation-timeline: view();
+  animation-range: exit 0% exit 80%;
+}
+
+@keyframes text-disappear {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+
+.line-container {
+  position: fixed;
+  
 }

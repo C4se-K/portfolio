@@ -1,3 +1,5 @@
+import Scroll from "@/components/Scroll";
+
 const projects = [
     {id : 1, title: "project 1 ", text: "description about project n. what happened here?description about project n. what happened here?description about project n. what happened here?"},
     {id : 2, title: "project 2 ", text: "description about project n. what happened here?description about project n. what happened here?description about project n. what happened here?"},
@@ -7,10 +9,15 @@ const projects = [
 
 export default function Home() {
   return (
-    <div className="w-full max-w-[80%] mx-auto flex flex-col">
+    <div className="h-screen w-full flex justify-center hide-scrollbar">
+      <div className="h-full w-full max-w-[80%] mx-auto flex flex-col overflow-y-scroll snap-y snap-proximity">
+
+
+
+      
 
       {/* welcome */}
-      <section className="min-h-screen flex flex-col justify-center p-8 border-b border-neutral-200">
+      <section id="greeting" className="snap-start autoHide min-h-screen p-8 flex flex-col justify-center p-8 border-b border-neutral-200">
         <div className="w-full max-2-6xl mx-auto flex flex-row items-center justify-between gap-12">
           <div className="flex-1">
             <h1 className="text-4xl font-bold mb-4 text-neutral-600">Hello, I’m A</h1>
@@ -18,6 +25,21 @@ export default function Home() {
               Welcome to my personal site. I'm a CS/SE student focused on building clean,
               thoughtful systems and tools.
             </p>
+
+            <div className="flex gap-2"> 
+              
+
+              <a
+                href="https://example.com"
+                target="blank"
+                rel="noopener noreferrer"
+              >
+                <button className="h-10 w-30 px-4 py-2 bg-blue-600 text-white rounded">
+                  Resume
+                </button>
+              </a>
+            </div>
+            
           </div>
           <div className="flex-1 flex justify-end">
             <img
@@ -33,8 +55,8 @@ export default function Home() {
       </section>
 
       {/* projects */}
-      <section className="min-h-screen p-8 border-b border-neutral-200">
-        <h2 className="text-3xl font-semibold mb-6">Projects</h2>
+      <section id="projects" className="snap-start autoShow autoHide min-h-screen p-8 border-b border-neutral-200">
+        <h2 className="autoShow text-neutral-600 text-3xl font-semibold mb-6">Projects</h2>
 
         <section className="grid grid-cols-3 gap-4">
             {projects.map((p) => (
@@ -64,26 +86,52 @@ export default function Home() {
 
         <footer className="mt-12 text-center text-sm text-neutral-500">
           <a
-            href="https://example.com"
-            target="blank"
+            href="https://github.com/C4se-K?tab=repositories"
+            target="github"
             rel="noopener noreferrer"
           >
             <button className="px-4 py-2 bg-blue-600 text-white rounded">
-              More Projects Coming...
+              More projects coming...
             </button>
           </a>
         </footer>
       </section>
 
       {/* contact */}
-      <section className="min-h-screen flex flex-col justify-center p-8">
-        <h2 className="text-3xl font-semibold mb-4">Contact</h2>
-        <p className="text-neutral-600 mb-4">Email: you@example.com</p>
-        <p className="text-neutral-600">GitHub / LinkedIn links here</p>
+      
+      <section id="contacts" className="snap-start autoShow min-h-screen flex flex-col justify-center p-8">
+        <div className="justify-center">
+          <h2 className="text-neutral-600 text-3xl font-semibold mb-4">Contact</h2>
+          <p className="text-neutral-600 mb-4">Email: you@example.com</p>
+          <p className="text-neutral-600">GitHub / LinkedIn links here</p>
+          <div className="flex gap-2"> 
+              <a
+                href="https://example.com"
+                target="blank"
+                rel="noopener noreferrer"
+              >
+                <button className="h-10 w-30 px-4 py-2 bg-blue-600 text-white rounded">
+                  linkdin
+                </button>
+              </a>
+
+              <a
+                href="https://example.com"
+                target="blank"
+                rel="noopener noreferrer"
+              >
+                <button className="h-10 w-30 px-4 py-2 bg-blue-600 text-white rounded">
+                  github
+                </button>
+              </a>
+            </div>
+        </div>
+        
 
 
       </section>
 
+    </div>
     </div>
   );
 }
